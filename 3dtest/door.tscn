@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://47mun3kx46yj"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_1ashv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqiis"]
+size = Vector3(2, 3, 0.3)
+
+[node name="door" type="CSGBox3D"]
+size = Vector3(2, 3, 0.3)
+script = ExtResource("1_1ashv")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_yqiis")
